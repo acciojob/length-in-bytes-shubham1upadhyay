@@ -1,5 +1,6 @@
 const byteSize = (str) => {
-  // write your code here
+   var m = encodeURIComponent(str).match(/%[89ABab]/g);
+  return str.length + (m ? m.length : 0);
 };
 
 // Do not change the code below
